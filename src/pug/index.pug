@@ -1,0 +1,10 @@
+extends layouts/_layout.pug
+block variables
+	-var currentPage='home'
+block prepend head
+	meta(charset='UTF-8')
+	+head-meta(
+	'Main Page | Sterti cherevyky'
+	)
+block main
+	include includes/_feedback

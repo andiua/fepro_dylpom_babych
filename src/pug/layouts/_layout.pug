@@ -1,0 +1,19 @@
+include ../mixins/_mixins
+doctype html
+block variables
+
+block head
+	+head-meta(
+	'Sterti cherevyky',
+	'Turistic club',
+	'https://andiua.github.io/fepro_dylpom_babych/app/'
+	)
+	link(rel="stylesheet", href="css/style.min.css")
+	link(rel="stylesheet", href="css/sprite.css")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+body
+	block header
+		include ../includes/_header
+	block main
+	block footer
+		include ../includes/_footer

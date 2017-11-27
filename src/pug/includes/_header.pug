@@ -1,0 +1,21 @@
+include ../mixins/_mixins
+header.page-header
+	.page-header__top
+		.page-header__top-wrap
+			.page-header__top
+				a.page-header__logo(href='index.html')
+				-var menu=[{href: 'Index', title: 'Home'}, {href:'About us', title: 'About us'}, {href:'Toure', title: 'Toure'}, {href:'Error', title: 'Services'}, {href:'Error', title: 'Journal'}]
+				nav.page-header__top-menu
+					ul.menu
+						each item in menu
+							li.menu__item
+								if item.title.toLowerCase() === currentPage
+									span.current-page= item.title
+								else
+									a.menu__link(href=item.href.toLowerCase().replace("\ ", "-")+".html")= item.title
+			a.page-header__top-call(href="error.html") Call us
+	.page-header__main-wrap
+		h2.page-header__main-title Travel with us
+		.page-header__logo.page-header__main-logo
+		p.page-header__main-text
+		a.btn-link.page-header__main-btn(href="error.html") Order now

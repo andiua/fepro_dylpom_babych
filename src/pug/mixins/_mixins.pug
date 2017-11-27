@@ -1,0 +1,12 @@
+mixin head-meta(title, description, href)
+	title= title
+	meta(name="description" content= description)
+	link(rel="canonical" href= href)
+
+mixin feedback(text, image, name, profession)
+	.feedback__wrap
+		p.feedback__text= text
+		p.feedback__img
+			img(src= image)
+		p.feedback__name= name
+		span.feedback__proffesion= profession
