@@ -1,0 +1,71 @@
+//colors
+$primary-color: #36aeea;
+$primary-color__menu: #9daeb6;
+$primary-color__dark: #767272;
+$primary-color__white: #ffffff;
+$primary-color__text: #949494;
+$primary-color__title: #2c2e37;
+$primary-color__trasparent:transparent;
+$primary-color__hover: #0e5b81;
+
+
+//font
+$primary-font-family:'Open Sans';
+$text-upper:uppercase;
+$text-notransform:none;
+$font-size-404: 72px;
+$font-size50:50px;
+$font-size__form--title:36px;
+$font-size__title:30px;
+$font-size__toure--title:28px;
+$font-size__toure--price-new:26px;
+$font-size__small-title:20px;
+$font-size__bigger:18px;
+$font-size__middle:16px;
+$font-size__small:14px;
+$font-size__menu:12px;
+$font-size__the-smallest:11px;
+$text-line-height:1.8;
+$primary-line-height:1.3;
+$line-height--middle:1.6;
+
+
+
+
+
+//border
+$border-box-white:3px solid $primary-color__white;
+$border-box-blue:3px solid $primary-color;
+$border-hover: 2px solid $primary-color;
+
+//text-styles
+$font-weight-bold:bold;
+$font-weight-medium:500;
+$font-weight-light:300;
+$font-weight-ultralight:200;
+
+//padding, margin
+// $primary-padding-block:80px 0;
+$margin-title: 50px;
+$margin-smalltitle: 45px 0 30px;
+// $margin-price: 10px 0 0 0;
+// $margin-subtitle: 0px 0 65px 0;
+// $margin-titleline:20px auto 30px;
+// $padding15:15px 0;
+// $title-padding-block:65px 0;
+
+//background blocks
+$background-header:url(../img/bg_guide.jpg);
+$background-header-border:url(../img/border.png);
+$background-header-planet:url(../img/bg-planet.png);
+$background-404:url(../img/bg_404.jpg);
+$background-white:#ffffff;
+// $background-grey:#f5f5f5;
+// $background-darkgrey:#ebebeb;
+// $background-dark:#000000;
+
+//width 1/3 blocks in row
+$width-three-block:28.3%;
+$width-two-block:40%;
+//$width-two-block:40%;
+$width_tabslink:75px;

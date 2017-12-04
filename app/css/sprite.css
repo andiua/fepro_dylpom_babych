@@ -1,0 +1,144 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-cheap {
+  background-image: url(sprite.png);
+  background-position: 0px -193px;
+  width: 179px;
+  height: 179px;
+}
+.icon-client {
+  background-image: url(sprite.png);
+  background-position: 0px -387px;
+  width: 179px;
+  height: 179px;
+}
+.icon-drop {
+  background-image: url(sprite.png);
+  background-position: -388px -193px;
+  width: 59px;
+  height: 74px;
+}
+.icon-drop_hover {
+  background-image: url(sprite.png);
+  background-position: -388px -282px;
+  width: 59px;
+  height: 74px;
+}
+.icon-fb {
+  background-image: url(sprite.png);
+  background-position: -354px -387px;
+  width: 40px;
+  height: 41px;
+}
+.icon-fb_hover {
+  background-image: url(sprite.png);
+  background-position: -650px -290px;
+  width: 40px;
+  height: 41px;
+}
+.icon-guide {
+  background-image: url(sprite.png);
+  background-position: -515px 0px;
+  width: 179px;
+  height: 179px;
+}
+.icon-heart {
+  background-image: url(sprite.png);
+  background-position: -515px -194px;
+  width: 81px;
+  height: 81px;
+}
+.icon-heart_hover {
+  background-image: url(sprite.png);
+  background-position: -611px -194px;
+  width: 81px;
+  height: 81px;
+}
+.icon-leaf {
+  background-image: url(sprite.png);
+  background-position: -274px -387px;
+  width: 65px;
+  height: 65px;
+}
+.icon-leaf_hover {
+  background-image: url(sprite.png);
+  background-position: -194px -387px;
+  width: 65px;
+  height: 65px;
+}
+.icon-logo-big {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 500px;
+  height: 178px;
+}
+.icon-logo {
+  background-image: url(sprite.png);
+  background-position: -515px -290px;
+  width: 120px;
+  height: 43px;
+}
+.icon-routs {
+  background-image: url(sprite.png);
+  background-position: -194px -193px;
+  width: 179px;
+  height: 179px;
+}
+.icon-star {
+  background-image: url(sprite.png);
+  background-position: -462px -193px;
+  width: 16px;
+  height: 16px;
+}
+.icon-star_hover {
+  background-image: url(sprite.png);
+  background-position: -462px -224px;
+  width: 16px;
+  height: 16px;
+}
+.icon-twitter {
+  background-image: url(sprite.png);
+  background-position: -409px -387px;
+  width: 40px;
+  height: 41px;
+}
+.icon-twitter_hover {
+  background-image: url(sprite.png);
+  background-position: -464px -387px;
+  width: 40px;
+  height: 41px;
+}
+.icon-vk {
+  background-image: url(sprite.png);
+  background-position: -519px -387px;
+  width: 40px;
+  height: 41px;
+}
+.icon-vk_hover {
+  background-image: url(sprite.png);
+  background-position: -574px -387px;
+  width: 40px;
+  height: 41px;
+}
+.icon-waves {
+  background-image: url(sprite.png);
+  background-position: -515px -348px;
+  width: 81px;
+  height: 7px;
+}

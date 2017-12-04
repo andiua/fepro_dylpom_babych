@@ -1,0 +1,34 @@
+.btn-link{
+	@include btn(260px, 50px, $font-size__menu, 
+		$primary-color, 
+		$primary-color__white, $border-box-blue, 
+		$font-weight-bold, 5px);
+	&:hover{
+		background: $primary-color__hover;
+	}
+}
+.page-header__top-call{
+	@extend.btn-link;
+	width: auto;
+	padding: 0 4%;
+	color: $primary-color;
+	background-color: $primary-color__trasparent;
+	&:hover{
+		background: $primary-color;
+		color: $primary-color__white;
+	}
+}
+.btn__about-us{
+	@extend.btn-link;
+	width: 130px;
+	height: 40px;
+	line-height: 36px;
+
+}
+.b-formheader input[type="submit"] {
+
+}
+
+.contact-us form input[type="submit"] {
+
+}

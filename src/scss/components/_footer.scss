@@ -1,0 +1,21 @@
+.footer__links{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin-bottom: 12px;
+}
+.sight-footer{
+	background-color: #000000;
+	padding-top: 12px;
+	padding-bottom: 12px
+}
+.footer__links a{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+.footer--text{
+	color: $primary-color-light;
+	font-family: $primary-font-family;
+	font-size: $font-size-text;
+	text-align: center;
+}

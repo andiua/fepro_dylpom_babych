@@ -13,17 +13,18 @@ var bourbon = require('node-bourbon');
 var csso = require('gulp-csso');
 var htmlhint = require("gulp-htmlhint");
 var sassGlob = require('gulp-sass-glob');
+// var bulkSass = require('gulp-sass-bulk-import');
 
 gulp.task('sprite', function() {
     var spriteData =
         gulp.src('./src/img/sprite/*.*') // путь, откуда берем картинки для спрайта
             .pipe(spritesmith({
                 imgName: 'sprite.png',
-                cssName: 'sprite.css',
+                cssName: '_sprite.scss',
             }));
 
     spriteData.img.pipe(gulp.dest('./app/img/')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('./app/css/')); // путь, куда сохраняем стили
+    spriteData.css.pipe(gulp.dest('./src/scss/components')); // путь, куда сохраняем стили
 });
 
 gulp.task('pug', function() {
@@ -47,12 +48,26 @@ gulp.task('sass', function() {
         .pipe(sass({includePaths: require("node-bourbon").includePaths})
             .on("error", notify.onError()))
         .pipe(rename({suffix: '.min', prefix : ''}))
-        .pipe(autoprefixer(['last 15 versions'])) //подключаем Autoprefixer
+        .pipe(autoprefixer({
+            browsers: ['>1%', 'last 2 versions'],
+            cascade: false
+        })) //подключаем Autoprefixer
         .pipe(cleanCSS())
         .pipe(csscomb())
         .pipe(csso()) // минифицируем css, полученный на предыдущем шаге
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('css', function() {
+    return gulp
+            .src(srcDir + 'stylesheets/style.scss')
+            .pipe(bulkSass())
+            .pipe(
+                sass({
+                    includePaths: ['src/stylesheets']
+                }))
+            .pipe( gulp.dest('./app/css/') );
 });
 
 gulp.task('browserSync', ['sass', 'pug'], function() {
@@ -76,14 +91,9 @@ gulp.task('htmlhint', function() {
         .pipe(htmlhint.reporter())
 });
 
-gulp.task('watch', ['pug', 'styles', 'sass', 'browserSync'], function() {
+gulp.task('watch', ['pug', 'sass', 'browserSync'], function() {
     gulp.watch('src/pug/**/*.pug', ['pug']);
-    gulp.watch('src/scss/**/*.scss', ['styles']);
+    // gulp.watch('src/scss/**/*.scss', ['styles']);
     gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
 });
-
-
-
-
-

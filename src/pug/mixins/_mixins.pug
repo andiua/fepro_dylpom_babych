@@ -10,3 +10,35 @@ mixin feedback(text, image, name, profession)
 			img(src= image)
 		p.feedback__name= name
 		span.feedback__proffesion= profession
+
+mixin journal(image, icon, name, title, text)
+	div(class='journal-post journal-post__'+ icon)
+		div(class='journal-post__img-wrap journal-post__img-wrap--'+ icon)
+			img(src= image)
+		div.journal-post__content
+			h4.content-subtitle= name
+			h3.journal-post__title= title
+			p.small-text= text
+
+mixin contact-form(type, placeholder, name)
+	input(type=type, placeholder=placeholder, name= name,required)
+
+mixin how-work(number, title, text)
+	span.how-work__content-number= number
+	.how-work__content-icon
+	.content-subtitle.how-work__content-title= title
+	.small-text= text
+
+mixin tour-list(title, text, oldPrice, newPrice)
+	a.tour-item
+		.tour-item__raiting
+			.tour-item__raiting-item
+			.tour-item__raiting-item
+			.tour-item__raiting-item
+			.tour-item__raiting-item
+			.tour-item__raiting-item
+		.tour-item__title= title
+		.tour-item__text.main-text= text
+		.tour-item__price
+			span.tour-item__price--old= oldPrice
+			span.tour-item__price--new= newPrice

@@ -1,9 +1,17 @@
 include ../mixins/_mixins
 footer.page-footer
-	.wrap.footer-wrap
-		p.footer-text All rights reserved 2017
-		-var i = ["icon-soc_fb", "icon-soc_tw", "icon-soc_vk"];
-		for name in i
-			a(class= name href="error.html")
-		a.footer-tel(href='+38063111111') 063 11 11 111
+	.wrap
+		.footer-form
+			h2.footer-form__title Підписатись
+			.footer-form__text.small-text Підпишіться на наші новини
+			+contact-form("text", "Ваше ім'я", "name")
+			+contact-form("tel", "Ваш телефон", "phone")
+			+contact-form("email", "Ваша пошта", "email")
+			input.btn.btn-footer(value='Надіслати', type='submit', name='submit', required)
+		.footer-wrap
+			p.footer-text All rights reserved 2017
+			-var i = ["icon-soc_fb", "icon-soc_tw", "icon-soc_vk"];
+			for name in i
+				a(class= name href="error.html")
+			a.footer-tel(href='+38063111111') 063 11 11 111
 	sript(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')

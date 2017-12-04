@@ -1,21 +1,24 @@
 include ../mixins/_mixins
 header.page-header
-	.page-header__top
-		.page-header__top-wrap
-			.page-header__top
+	.wrap.wrap--header
+		.page-header__top
+			.page-header__top-wrap
 				a.page-header__logo(href='index.html')
-				-var menu=[{href: 'Index', title: 'Home'}, {href:'About us', title: 'About us'}, {href:'Toure', title: 'Toure'}, {href:'Error', title: 'Services'}, {href:'Error', title: 'Journal'}]
-				nav.page-header__top-menu
-					ul.menu
+				-var menu=[{href: 'Index', title: 'Головна'}, {href:'About us', title: 'Про нас'}, {href:'Toure', title: 'Тури'}, {href:'Error', title: 'Послуги'}, {href:'Error', title: 'Журнал'}]
+				.btn-menu Меню
+				nav.menu
+					ul
 						each item in menu
 							li.menu__item
 								if item.title.toLowerCase() === currentPage
 									span.current-page= item.title
 								else
 									a.menu__link(href=item.href.toLowerCase().replace("\ ", "-")+".html")= item.title
-			a.page-header__top-call(href="error.html") Call us
-	.page-header__main-wrap
-		h2.page-header__main-title Travel with us
-		.page-header__logo.page-header__main-logo
-		p.page-header__main-text
-		a.btn-link.page-header__main-btn(href="error.html") Order now
+				a.page-header__top-call(href="error.html") Набрати нас
+
+		.page-header__main-wrap
+			h2.page-header__main-title Мандруйте разом з
+			.page-header__main-logo
+			p.page-header__main-text Наші мандрівки дають свободу, вони відкривають внутрішній потенціал людини. Примушують її вийти за межі зони комфорту "стерти черевики" і відчути життя всіма барвами веселки! 
+			.link-wrap
+				a.btn-link.page-header__main-btn(href="error.html") Замовити

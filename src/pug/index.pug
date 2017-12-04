@@ -1,10 +1,17 @@
 extends layouts/_layout.pug
 block variables
-	-var currentPage='home'
+	-var currentPage='головна'
 block prepend head
 	meta(charset='UTF-8')
 	+head-meta(
-	'Main Page | Sterti cherevyky'
+	'Головна | Стерті черевики'
 	)
+
 block main
+	include includes/_about-us
+	include includes/_journal
+	include includes/_order_toure
+	include includes/_how-work
+	include includes/_toure-list
+	include includes/_galerry
 	include includes/_feedback

@@ -22,7 +22,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-glob-import": "^0.1.0",
+    "gulp-wait": "0.0.2",
     "gulp.spritesmith": "^6.5.1",
-    "node-bourbon": "^4.2.8"
+    "node-bourbon": "^4.2.8",
+    "spritesmith": "^3.2.1"
   }
 }

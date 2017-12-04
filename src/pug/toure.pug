@@ -1,0 +1,14 @@
+extends layouts/_layout.pug
+block variables
+	-var currentPage='головна'
+block prepend head
+	meta(charset='UTF-8')
+	+head-meta(
+	'Тури | Стерті черевики'
+	)
+
+block main
+	include includes/_about-us
+	include includes/_toure-list
+	include includes/_toure-detail
+	include includes/_feedback
