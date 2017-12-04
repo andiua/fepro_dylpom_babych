@@ -1,0 +1,130 @@
+.page-header{
+	background: $primary-color $background-header 5% 20% no-repeat;
+		@media (min-width: 1300px){
+			background-position: center;	
+			background-size: cover;	
+		}
+}
+.wrap--header{
+	padding: 0 15px;
+	margin: 0;
+	@media (min-width: 740px){
+	    padding: 0 30px;
+	}
+	@media (min-width: 1300px){
+		padding: 0 100px;
+	}
+}
+.page-header__top{
+	background: rgba(255, 255, 255, 0.2);
+	padding: 20px 0;
+	.page-header__top-wrap{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+li{
+	display: block;
+	@media (min-width: 740px){
+		display: inline-block;
+	}
+}
+.current-page{
+	border-bottom: 1px solid $primary-color;
+}
+.page-header__logo:before{
+	display: inline-block;	
+	content: '';
+	@include sprite($logo);
+}
+.menu{
+	display: none;
+	width: 33.3%;
+}
+.btn-menu{
+	@include block__title($font-size__menu, 0, $primary-color,$text-upper);
+	font-weight: $font-weight-bold;
+	position: absolute;
+	left: calc(50% - 22px);
+	margin-top: 18px;
+	 &:hover{
+    	border-bottom: $border-hover;
+    }
+}
+.btn-menu:hover ~ .menu, .menu:hover {
+	display:inline-block;
+	background: rgba(255, 255, 255, .4 );
+	text-align: center;
+	text-transform: $text-upper;
+	position: absolute;
+	left: 33%;
+	top: 57px;
+}
+.menu__link{
+	display: block;
+	padding: 16px 0;
+	font-weight: $font-weight-bold;
+	font-size: $font-size__menu;
+	&:hover{
+		border-bottom: $border-hover;
+	}
+	@media (min-width: 740px){
+		padding: 15px;
+	}
+}
+.current-page{
+	@extend.menu__link;
+	color: $primary-color;
+	border-bottom: $border-hover;
+}
+.page-header__main-wrap{
+	@include flex-parrent(column,  flex-start, stretch);
+	padding: 100px 0;
+	text-align: center;
+	@media (min-width: 1300px){
+		background: $background-header-border no-repeat;
+		background-size: 98%;	
+		padding: 40px;
+		text-align: left;
+		margin-top: 130px;
+	}
+}
+.page-header__main-title{
+	@include block__title($font-size__form--title, 0, $primary-color__white,
+		$text-upper);
+	margin: 0;
+	@media (min-width: 1300px){
+		font-size: $font-size50;
+	}
+}
+.page-header__main-logo:before{
+	display: inline-block;
+	content: '';
+	@include sprite($logo);
+	margin: -50px 0 0;
+	@media (min-width: 1300px){
+		@include sprite($logo-big);
+	}
+}
+.page-header__main-text{
+	font-size: $font-size__bigger;
+	color: $primary-color__white;
+	line-height: $line-height--middle;
+	@media (min-width: 1300px){
+		max-width: 600px;
+	}
+}
+@media (min-width: 1300px){
+	.menu{
+		flex-basis: 800px;
+		display: inline-block;
+		text-transform: $text-upper;
+		&:hover{
+			position: static;
+			text-align: left;
+		}
+	}
+	.btn-menu{
+		display: none;
+	}
+}

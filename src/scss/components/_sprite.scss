@@ -1,0 +1,321 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$cheap-name: 'cheap';
+$cheap-x: 0px;
+$cheap-y: 178px;
+$cheap-offset-x: 0px;
+$cheap-offset-y: -178px;
+$cheap-width: 179px;
+$cheap-height: 179px;
+$cheap-total-width: 679px;
+$cheap-total-height: 536px;
+$cheap-image: 'sprite.png';
+$cheap: (0px, 178px, 0px, -178px, 179px, 179px, 679px, 536px, 'sprite.png', 'cheap', );
+$client-name: 'client';
+$client-x: 500px;
+$client-y: 0px;
+$client-offset-x: -500px;
+$client-offset-y: 0px;
+$client-width: 179px;
+$client-height: 179px;
+$client-total-width: 679px;
+$client-total-height: 536px;
+$client-image: 'sprite.png';
+$client: (500px, 0px, -500px, 0px, 179px, 179px, 679px, 536px, 'sprite.png', 'client', );
+$drop-name: 'drop';
+$drop-x: 417px;
+$drop-y: 178px;
+$drop-offset-x: -417px;
+$drop-offset-y: -178px;
+$drop-width: 59px;
+$drop-height: 74px;
+$drop-total-width: 679px;
+$drop-total-height: 536px;
+$drop-image: 'sprite.png';
+$drop: (417px, 178px, -417px, -178px, 59px, 74px, 679px, 536px, 'sprite.png', 'drop', );
+$drop-hover-name: 'drop_hover';
+$drop-hover-x: 358px;
+$drop-hover-y: 178px;
+$drop-hover-offset-x: -358px;
+$drop-hover-offset-y: -178px;
+$drop-hover-width: 59px;
+$drop-hover-height: 74px;
+$drop-hover-total-width: 679px;
+$drop-hover-total-height: 536px;
+$drop-hover-image: 'sprite.png';
+$drop-hover: (358px, 178px, -358px, -178px, 59px, 74px, 679px, 536px, 'sprite.png', 'drop_hover', );
+$fb-name: 'fb';
+$fb-x: 620px;
+$fb-y: 260px;
+$fb-offset-x: -620px;
+$fb-offset-y: -260px;
+$fb-width: 40px;
+$fb-height: 41px;
+$fb-total-width: 679px;
+$fb-total-height: 536px;
+$fb-image: 'sprite.png';
+$fb: (620px, 260px, -620px, -260px, 40px, 41px, 679px, 536px, 'sprite.png', 'fb', );
+$fb-hover-name: 'fb_hover';
+$fb-hover-x: 500px;
+$fb-hover-y: 303px;
+$fb-hover-offset-x: -500px;
+$fb-hover-offset-y: -303px;
+$fb-hover-width: 40px;
+$fb-hover-height: 41px;
+$fb-hover-total-width: 679px;
+$fb-hover-total-height: 536px;
+$fb-hover-image: 'sprite.png';
+$fb-hover: (500px, 303px, -500px, -303px, 40px, 41px, 679px, 536px, 'sprite.png', 'fb_hover', );
+$guide-name: 'guide';
+$guide-x: 0px;
+$guide-y: 357px;
+$guide-offset-x: 0px;
+$guide-offset-y: -357px;
+$guide-width: 179px;
+$guide-height: 179px;
+$guide-total-width: 679px;
+$guide-total-height: 536px;
+$guide-image: 'sprite.png';
+$guide: (0px, 357px, 0px, -357px, 179px, 179px, 679px, 536px, 'sprite.png', 'guide', );
+$heart-name: 'heart';
+$heart-x: 581px;
+$heart-y: 179px;
+$heart-offset-x: -581px;
+$heart-offset-y: -179px;
+$heart-width: 81px;
+$heart-height: 81px;
+$heart-total-width: 679px;
+$heart-total-height: 536px;
+$heart-image: 'sprite.png';
+$heart: (581px, 179px, -581px, -179px, 81px, 81px, 679px, 536px, 'sprite.png', 'heart', );
+$heart-hover-name: 'heart_hover';
+$heart-hover-x: 500px;
+$heart-hover-y: 179px;
+$heart-hover-offset-x: -500px;
+$heart-hover-offset-y: -179px;
+$heart-hover-width: 81px;
+$heart-hover-height: 81px;
+$heart-hover-total-width: 679px;
+$heart-hover-total-height: 536px;
+$heart-hover-image: 'sprite.png';
+$heart-hover: (500px, 179px, -500px, -179px, 81px, 81px, 679px, 536px, 'sprite.png', 'heart_hover', );
+$leaf-name: 'leaf';
+$leaf-x: 358px;
+$leaf-y: 252px;
+$leaf-offset-x: -358px;
+$leaf-offset-y: -252px;
+$leaf-width: 65px;
+$leaf-height: 65px;
+$leaf-total-width: 679px;
+$leaf-total-height: 536px;
+$leaf-image: 'sprite.png';
+$leaf: (358px, 252px, -358px, -252px, 65px, 65px, 679px, 536px, 'sprite.png', 'leaf', );
+$leaf-hover-name: 'leaf_hover';
+$leaf-hover-x: 423px;
+$leaf-hover-y: 252px;
+$leaf-hover-offset-x: -423px;
+$leaf-hover-offset-y: -252px;
+$leaf-hover-width: 65px;
+$leaf-hover-height: 65px;
+$leaf-hover-total-width: 679px;
+$leaf-hover-total-height: 536px;
+$leaf-hover-image: 'sprite.png';
+$leaf-hover: (423px, 252px, -423px, -252px, 65px, 65px, 679px, 536px, 'sprite.png', 'leaf_hover', );
+$logo-big-name: 'logo-big';
+$logo-big-x: 0px;
+$logo-big-y: 0px;
+$logo-big-offset-x: 0px;
+$logo-big-offset-y: 0px;
+$logo-big-width: 500px;
+$logo-big-height: 178px;
+$logo-big-total-width: 679px;
+$logo-big-total-height: 536px;
+$logo-big-image: 'sprite.png';
+$logo-big: (0px, 0px, 0px, 0px, 500px, 178px, 679px, 536px, 'sprite.png', 'logo-big', );
+$logo-name: 'logo';
+$logo-x: 500px;
+$logo-y: 260px;
+$logo-offset-x: -500px;
+$logo-offset-y: -260px;
+$logo-width: 120px;
+$logo-height: 43px;
+$logo-total-width: 679px;
+$logo-total-height: 536px;
+$logo-image: 'sprite.png';
+$logo: (500px, 260px, -500px, -260px, 120px, 43px, 679px, 536px, 'sprite.png', 'logo', );
+$menu-name: 'menu';
+$menu-x: 662px;
+$menu-y: 211px;
+$menu-offset-x: -662px;
+$menu-offset-y: -211px;
+$menu-width: 16px;
+$menu-height: 16px;
+$menu-total-width: 679px;
+$menu-total-height: 536px;
+$menu-image: 'sprite.png';
+$menu: (662px, 211px, -662px, -211px, 16px, 16px, 679px, 536px, 'sprite.png', 'menu', );
+$routs-name: 'routs';
+$routs-x: 179px;
+$routs-y: 178px;
+$routs-offset-x: -179px;
+$routs-offset-y: -178px;
+$routs-width: 179px;
+$routs-height: 179px;
+$routs-total-width: 679px;
+$routs-total-height: 536px;
+$routs-image: 'sprite.png';
+$routs: (179px, 178px, -179px, -178px, 179px, 179px, 679px, 536px, 'sprite.png', 'routs', );
+$star-name: 'star';
+$star-x: 662px;
+$star-y: 195px;
+$star-offset-x: -662px;
+$star-offset-y: -195px;
+$star-width: 16px;
+$star-height: 16px;
+$star-total-width: 679px;
+$star-total-height: 536px;
+$star-image: 'sprite.png';
+$star: (662px, 195px, -662px, -195px, 16px, 16px, 679px, 536px, 'sprite.png', 'star', );
+$star-hover-name: 'star_hover';
+$star-hover-x: 662px;
+$star-hover-y: 179px;
+$star-hover-offset-x: -662px;
+$star-hover-offset-y: -179px;
+$star-hover-width: 16px;
+$star-hover-height: 16px;
+$star-hover-total-width: 679px;
+$star-hover-total-height: 536px;
+$star-hover-image: 'sprite.png';
+$star-hover: (662px, 179px, -662px, -179px, 16px, 16px, 679px, 536px, 'sprite.png', 'star_hover', );
+$twitter-name: 'twitter';
+$twitter-x: 620px;
+$twitter-y: 303px;
+$twitter-offset-x: -620px;
+$twitter-offset-y: -303px;
+$twitter-width: 40px;
+$twitter-height: 41px;
+$twitter-total-width: 679px;
+$twitter-total-height: 536px;
+$twitter-image: 'sprite.png';
+$twitter: (620px, 303px, -620px, -303px, 40px, 41px, 679px, 536px, 'sprite.png', 'twitter', );
+$twitter-hover-name: 'twitter_hover';
+$twitter-hover-x: 179px;
+$twitter-hover-y: 357px;
+$twitter-hover-offset-x: -179px;
+$twitter-hover-offset-y: -357px;
+$twitter-hover-width: 40px;
+$twitter-hover-height: 41px;
+$twitter-hover-total-width: 679px;
+$twitter-hover-total-height: 536px;
+$twitter-hover-image: 'sprite.png';
+$twitter-hover: (179px, 357px, -179px, -357px, 40px, 41px, 679px, 536px, 'sprite.png', 'twitter_hover', );
+$vk-name: 'vk';
+$vk-x: 580px;
+$vk-y: 303px;
+$vk-offset-x: -580px;
+$vk-offset-y: -303px;
+$vk-width: 40px;
+$vk-height: 41px;
+$vk-total-width: 679px;
+$vk-total-height: 536px;
+$vk-image: 'sprite.png';
+$vk: (580px, 303px, -580px, -303px, 40px, 41px, 679px, 536px, 'sprite.png', 'vk', );
+$vk-hover-name: 'vk_hover';
+$vk-hover-x: 540px;
+$vk-hover-y: 303px;
+$vk-hover-offset-x: -540px;
+$vk-hover-offset-y: -303px;
+$vk-hover-width: 40px;
+$vk-hover-height: 41px;
+$vk-hover-total-width: 679px;
+$vk-hover-total-height: 536px;
+$vk-hover-image: 'sprite.png';
+$vk-hover: (540px, 303px, -540px, -303px, 40px, 41px, 679px, 536px, 'sprite.png', 'vk_hover', );
+$waves-name: 'waves';
+$waves-x: 500px;
+$waves-y: 344px;
+$waves-offset-x: -500px;
+$waves-offset-y: -344px;
+$waves-width: 81px;
+$waves-height: 7px;
+$waves-total-width: 679px;
+$waves-total-height: 536px;
+$waves-image: 'sprite.png';
+$waves: (500px, 344px, -500px, -344px, 81px, 7px, 679px, 536px, 'sprite.png', 'waves', );
+$spritesheet-width: 679px;
+$spritesheet-height: 536px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($cheap, $client, $drop, $drop-hover, $fb, $fb-hover, $guide, $heart, $heart-hover, $leaf, $leaf-hover, $logo-big, $logo, $menu, $routs, $star, $star-hover, $twitter, $twitter-hover, $vk, $vk-hover, $waves, );
+$spritesheet: (679px, 536px, 'sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../img/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

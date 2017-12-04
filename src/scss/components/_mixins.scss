@@ -1,0 +1,44 @@
+@mixin btn($width, $height, $font-size, $bg-color, 
+	$color, $border, $text-style, $border-radius){
+	display: inline-block;
+	width: $width;
+	height: $height;
+	line-height: $height - 3px;
+	background-color: $bg-color;
+	color: $color;
+	font-size: $font-size;
+	border:$border;
+	border-radius: $border-radius;
+	font-weight: $text-style;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	text-transform: uppercase;
+}
+
+@mixin block__title ($font-size, 
+	$text-align, $primary-color, 
+	$text-transform){
+	font-size: $font-size;
+	text-align:$text-align;
+	color:$primary-color;
+	text-transform:$text-transform;
+}
+
+@mixin border($height, $style, $color){
+	border-top:$height $style $color;
+}
+
+@mixin flex-parrent ($flex, $justify-content, $align-items){
+	display: flex;
+	flex-direction: $flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin journal-icon($sprite){
+	display: inline-block;	
+	content: '';
+	@include sprite($sprite);
+	position: absolute;
+}

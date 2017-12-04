@@ -1,0 +1,13 @@
+extends layouts/_layout.pug
+block variables
+	-var currentPage='про нас'
+block prepend head
+	meta(charset='UTF-8')
+	+head-meta(
+	'Про нас | Стерті черевики'
+	)
+
+block main
+	include includes/_about-us
+	include includes/_how-work
+	include includes/_feedback

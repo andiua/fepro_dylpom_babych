@@ -1,0 +1,99 @@
+.journal-post{
+	box-shadow: 0 0 10px $primary-color__menu;
+	text-align: center;
+	position: relative;
+}
+.journal-post:hover{
+	box-shadow: 0 0 20px 5px $primary-color__menu;
+}
+.content-subtitle{
+	@include block__title($font-size__the-smallest, 0, 
+		$primary-color, $text-upper);
+	margin: 50px 0;
+	font-weight: bold;
+}
+.journal-post__img-wrap--heart:before{
+	@include journal-icon($heart);
+	top: calc(18% + 20px);
+	left: calc(50% - 50px);
+}
+.journal-post__img-wrap--leaf:before{
+	@include journal-icon($leaf);
+	top: calc(18% + 250px);
+	left: calc(50% - 50px);
+}
+.journal-post__img-wrap--drop:before{
+	@include journal-icon($drop);
+	top: calc(18% + 20px);
+	left: calc(50% - 50px);
+}
+// @each $icon in $heart, $leaf, $drop {
+// 	.journal-post__img-wrap__#{$icon}:before {
+// 		margin: #{$icon};
+// 	}
+// }
+.journal-post__title{
+	@include block__title($font-size__middle, 0, 
+		$primary-color__title, $text-upper);
+	letter-spacing: 1px;
+	margin-bottom: 25px; 
+}
+.small-text{
+	@extend %text;
+	line-height: $line-height--middle;
+	padding-bottom: 90px;
+}
+.journal-post:hover .journal-post__img-wrap--heart:before{
+	@include sprite($heart-hover);
+}
+.journal-post:hover .journal-post__img-wrap--leaf:before{
+	@include sprite($leaf-hover);
+}
+.journal-post:hover .journal-post__img-wrap--drop:before{
+	@include sprite($drop-hover);
+}
+
+@media (min-width: 740px){
+	.journal__content-wrap{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.journal-post__heart{
+		flex-basis: 50%;
+	}
+	.journal-post__leaf{
+		@extend .journal-post__heart;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	.journal-post__img-wrap--leaf:before{
+		top: calc(18% + 370px);
+	}
+	.journal-post__drop{
+		display: flex;
+	}
+	.journal-post__img-wrap img{
+		width: 100%;
+	}
+	.journal-post__img-wrap--drop{
+		flex-basis: 50%;
+		display: flex;
+		align-items: center;
+			&::before{
+				left: calc(50% - 180px);
+		}
+   	}
+   	.journal-post__content{
+   		flex-basis: 50%;
+   	}
+}
+@media (min-width: 1300px){
+	.journal-post__img-wrap--drop{
+		flex-basis: 50%;
+		display: flex;
+		align-items: center;
+			&::before{
+				left: calc(50% - 350px);
+		}
+	}
+}
