@@ -4,6 +4,14 @@
 			background-position: center;	
 			background-size: cover;	
 		}
+	&__top{
+		background: rgba(255, 255, 255, 0.2);
+		padding: 20px 0;
+		&-wrap{
+			display: flex;
+			justify-content: space-between;
+		}
+	}
 }
 .wrap--header{
 	padding: 0 15px;
@@ -15,14 +23,7 @@
 		padding: 0 100px;
 	}
 }
-.page-header__top{
-	background: rgba(255, 255, 255, 0.2);
-	padding: 20px 0;
-	.page-header__top-wrap{
-		display: flex;
-		justify-content: space-between;
-	}
-}
+.page-header 
 li{
 	display: block;
 	@media (min-width: 740px){

@@ -9,6 +9,7 @@
 }
 .page-header__top-call{
 	@extend.btn-link;
+	white-space: nowrap;
 	width: auto;
 	padding: 0 4%;
 	color: $primary-color;

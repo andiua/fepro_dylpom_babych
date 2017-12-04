@@ -16,7 +16,8 @@ body{
 
 img {
 	border: 0;
-	max-width: 100%
+	min-width: 100%;
+    min-height: 100%;
 }
 
 ul {
@@ -47,23 +48,28 @@ a {
 		$text-upper);
 	margin-bottom: $margin-title;
 	text-align: center;	
+	position: relative;
 }
 .block__title:before{
 	position: absolute;
 	display: inline-block;	
+	transform: translateX(-50%);
+    left: 50%;
+    top: -50px;
 	content: '';
 	@include sprite($waves);
-	margin: -42px 90px 35px;
 }
 .small-title{
 	@include block__title($font-size__small-title, left, 
 		$primary-color__title, $text-upper);
+	position: relative;
 	margin: $margin-smalltitle;
 }
 .small-title:before{
 	display: inline-block;	
 	content: '';
 	@include sprite($waves);
-	margin: -47px -81px 40px 0;
+	position: absolute;
+    top: -50px;
 }
 
