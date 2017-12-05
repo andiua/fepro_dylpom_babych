@@ -1,69 +1,83 @@
 .about-us{
 	background: #fbfafa $background-header-planet 0 0 no-repeat;
 	background-size: cover;
-}
-.about-us__wrap{
-	display: flex;
-	flex-direction: column-reverse;
-}
-.about-us__text-text{
-	@extend %text;
-	line-height: $text-line-height;
-	text-align: left;
-	padding-bottom: 25px 
-}
-.about-us__img-small{
-	display: none;
-}
-@media (min-width: 740px){
-	.about-us__wrap{
-		flex-direction: row;
-	}
-	.about-us__text-wrap{
-		flex-basis: 70%;
-		margin-right: 30px;
-	}
-	.about-us__img-wrap{
-		height: 390px;
-		overflow: hidden;
-		width: 100%;
+	&__wrap{
 		display: flex;
-		justify-content: center;
-		align-items: flex-end;
+		flex-direction: column-reverse;
+	}
+	&__text-text{
+		@extend %text;
+		line-height: $text-line-height;
+		text-align: left;
+		padding-bottom: 25px 
+	}
+	&__img-small{
+		display: none;
+	}
+}
+// .about-us__wrap{
+// 	display: flex;
+// 	flex-direction: column-reverse;
+// }
+// .about-us__text-text{
+// 	@extend %text;
+// 	line-height: $text-line-height;
+// 	text-align: left;
+// 	padding-bottom: 25px 
+// }
+// .about-us__img-small{
+// 	display: none;
+// }
+@media (min-width: 740px){
+	.about-us{
+		&__wrap{
+			flex-direction: row;
+		}
+		&__text-wrap{
+			flex-basis: 70%;
+			margin-right: 30px;
+		}
+		&__img-wrap{
+			height: 390px;
+			overflow: hidden;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
 	}
 }
 @media (min-width: 1300px){
-	.about-us__text-wrap{
-		flex-basis: 35%;
-		margin-right: 50px;
+	.about-us{
+		&__text-wrap{
+			flex-basis: 35%;
+			margin-right: 50px;
 		}
-	.about-us__img-wrap{
-		height: 700px;
-		overflow: hidden;
-		width: 100%;	
-		margin-top: -120px;
-		flex-direction: column;	
-		align-items: flex-start;
-		position: relative;
-		justify-content: flex-end;
-	}		
-	.about-us__img-big{
-		display: flex;
-		position: absolute;
-		left: 70px;
-		bottom: 70px;
-		height: 100%;
-		z-index: 4;
-
+		&__img-wrap{
+			height: 700px;
+			overflow: hidden;
+			width: 100%;	
+			margin-top: -120px;
+			flex-direction: column;	
+			align-items: flex-start;
+			position: relative;
+			justify-content: flex-end;
+		}		
+		&__img-big{
+			display: flex;
+			position: absolute;
+			left: 70px;
+			bottom: 70px;
+			height: 100%;
+			z-index: 4;
+		}
+	&__img-small{
+			display: flex;
+			width: 350px;
+			height: 350px;	
+			z-index: 6;
+		}	
 	}
-	.about-us__img-small{
-		display: flex;
-		width: 350px;
-		height: 350px;	
-		z-index: 6;
-	}	
-
-
 }
 
 

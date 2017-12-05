@@ -3,6 +3,15 @@
 	text-align: center;
 	position: relative;
 	&:hover{box-shadow: 0 0 20px 5px $primary-color__menu;}
+	&:hover &__img-wrap--heart:before{
+		@include sprite($heart-hover);
+	}
+	&:hover &__img-wrap--leaf:before{
+		@include sprite($leaf-hover);
+	}	
+	&:hover &__img-wrap--drop:before{
+		@include sprite($drop-hover);
+	}	
 	&__img-wrap{
 		@include flex-parrent(row, center, center);
 		overflow: hidden;
@@ -36,58 +45,72 @@
 	margin: 50px 0;
 	font-weight: bold;
 }
-
-
-// @each $icon in $heart, $leaf, $drop {
-// 	.journal-post__img-wrap__#{$icon}:before {
-// 		margin: #{$icon};
-// 	}
-// }
-
 .small-text{
 	@extend %text;
 	line-height: $line-height--middle;
 	padding: 0 50px 90px;
 }
-.journal-post:hover .journal-post__img-wrap--heart:before{
-	@include sprite($heart-hover);
-}
-.journal-post:hover .journal-post__img-wrap--leaf:before{
-	@include sprite($leaf-hover);
-}
-.journal-post:hover .journal-post__img-wrap--drop:before{
-	@include sprite($drop-hover);
-}
+// .journal-post:hover .journal-post__img-wrap--heart:before{
+// 	@include sprite($heart-hover);
+// }
+// .journal-post:hover .journal-post__img-wrap--leaf:before{
+// 	@include sprite($leaf-hover);
+// }
+// .journal-post:hover .journal-post__img-wrap--drop:before{
+// 	@include sprite($drop-hover);
+// }
 
 @media (min-width: 740px){
 	.journal__content-wrap{
 		display: flex;
 		flex-wrap: wrap;
 	}
-	.journal-post__heart{
+	.journal-post{
+		&__heart{
 		flex-basis: 50%;
-	}
-	.journal-post__leaf{
-		@extend .journal-post__heart;
-		display: flex;
-		flex-direction: column-reverse;
-	}
-	.journal-post__img-wrap--leaf:before{
-		top: calc(18% + 370px);
-	}
-	.journal-post__drop{
-		display: flex;
-	}
-	.journal-post__img-wrap img{
-		width: 100%;
-	}
-	.journal-post__img-wrap--drop{
-		flex-basis: 50%;
-		align-items: center;
 		}
-   	.journal-post__content{
-   		flex-basis: 50%;
-   	}
+		&__leaf{
+			@extend .journal-post__heart;
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		&__drop{
+			display: flex;
+		}
+		&__content{
+	   		flex-basis: 50%;
+	   	}
+		&__img-wrap--drop{
+			flex-basis: 50%;
+		}
+	   	&__img-wrap img{
+			width: 100%;
+		}
+	}
+	// .journal-post__heart{
+	// 	flex-basis: 50%;
+	// }
+	// .journal-post__leaf{
+	// 	@extend .journal-post__heart;
+	// 	display: flex;
+	// 	flex-direction: column-reverse;
+	// }
+	// .journal-post__img-wrap--leaf:before{   нафіг не треба!
+	// 	top: calc(18% + 370px);
+	// }
+	// .journal-post__drop{
+	// 	display: flex;
+	// }
+	// .journal-post__img-wrap img{
+	// 	width: 100%;
+	// }
+	// .journal-post__img-wrap--drop{
+	// 	flex-basis: 50%;
+	// 	align-items: center;  align-items- already setuped
+	// 	}
+   	// .journal-post__content{
+   	// 	flex-basis: 50%;
+   	// }
 }
 @media (min-width: 1300px){
 	.journal-post__img-wrap--drop{
