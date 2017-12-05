@@ -29,16 +29,16 @@ mixin how-work(number, title, text)
 	.content-subtitle.how-work__content-title= title
 	.small-text= text
 
-mixin tour-list(title, text, oldPrice, newPrice)
-	a.tour-item
+mixin tour-list(nameClass, title, text, oldPrice, newPrice)
+	a(class='tour-item tour-item--' + nameClass)
 		.tour-item__raiting
 			.tour-item__raiting-item
 			.tour-item__raiting-item
 			.tour-item__raiting-item
 			.tour-item__raiting-item
 			.tour-item__raiting-item
-		.tour-item__title= title
-		.tour-item__text.main-text= text
+		h4.tour-item__title= title
+		p.tour-item__text.main-text= text
 		.tour-item__price
 			span.tour-item__price--old= oldPrice
 			span.tour-item__price--new= newPrice

@@ -14,20 +14,10 @@
 	&__img-small{
 		display: none;
 	}
+	&__img-big img{
+		max-width: 100%;
+	}
 }
-// .about-us__wrap{
-// 	display: flex;
-// 	flex-direction: column-reverse;
-// }
-// .about-us__text-text{
-// 	@extend %text;
-// 	line-height: $text-line-height;
-// 	text-align: left;
-// 	padding-bottom: 25px 
-// }
-// .about-us__img-small{
-// 	display: none;
-// }
 @media (min-width: 740px){
 	.about-us{
 		&__wrap{

@@ -33,12 +33,12 @@ a {
 
 .wrap {
 	min-width: 290px;
-	padding: 30px 15px;
+	margin: 30px 15px;
 	@media (min-width: 740px){
-		padding: 50px 30px;
+		margin: 50px 30px;
 	}
 	@media (min-width: 1300px){
-		padding: 100px 100px;
+		margin: 100px 100px;
 	}
 }
 
@@ -49,27 +49,28 @@ a {
 	margin-bottom: $margin-title;
 	text-align: center;	
 	position: relative;
-}
-.block__title:before{
-	position: absolute;
-	display: inline-block;	
-	transform: translateX(-50%);
-    left: 50%;
-    top: -50px;
-	content: '';
-	@include sprite($waves);
+	&:before{
+		position: absolute;
+		display: inline-block;	
+		transform: translateX(-50%);
+	    left: 50%;
+	    top: -30px;
+		content: '';
+		@include sprite($waves);
+		@media (min-width: 1300px){
+			top: -50px;
+		}
+	}
 }
 .small-title{
 	@include block__title($font-size__small-title, left, 
 		$primary-color__title, $text-upper);
 	position: relative;
 	margin: $margin-smalltitle;
-}
-.small-title:before{
-	display: inline-block;	
-	content: '';
-	@include sprite($waves);
-	position: absolute;
-    top: -50px;
+	&:before{
+		@extend .block__title:before;
+		left: 0;
+		transform: none;
+	}
 }
 

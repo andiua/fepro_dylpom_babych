@@ -1,0 +1,26 @@
+.order{
+	background: #FFF $background-order center 0 no-repeat;
+	background-size: cover;
+	// text-align: center;
+	padding: 30px 0;
+	&__form{
+		@include flex-parrent(column, space-between, stretch);
+		@media (min-width: 740px){
+			background-color: $primary-color__white;
+			flex-direction: row;
+			height: 54px;
+			width: 70%;
+			align-items: center;
+		}
+	}
+	&-toure__text{
+		margin-bottom: 20px;
+		color: $primary-color__text;
+		line-height: $line-height--middle;
+
+	}
+	&__note-text{
+		font-size: $font-size__small;
+		color: $primary-color;
+	}
+}
