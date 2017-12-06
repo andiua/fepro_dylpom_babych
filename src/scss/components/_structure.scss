@@ -46,7 +46,7 @@ a {
 	@include block__title($font-size__title, center, 
 		$primary-color__title, 
 		$text-upper);
-	margin-bottom: $margin-title;
+	margin-bottom: 50px;
 	text-align: center;	
 	position: relative;
 	&:before{
@@ -59,6 +59,7 @@ a {
 		@include sprite($waves);
 		@media (min-width: 1300px){
 			top: -50px;
+			margin-bottom: 70px;
 		}
 	}
 }

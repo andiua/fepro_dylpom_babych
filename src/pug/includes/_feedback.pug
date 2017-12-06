@@ -1,11 +1,12 @@
 include ../mixins/_mixins
 .wrap
 	h2.block__title Відгуки мандрівників
-	+feedback('It was a great 3 day hike through the more unknown parts in the mountains close to Hoverla so we encounterd only a few other people.', 'img/feedback1.jpg', 'Tim de Bie', 'Вчитель історії'
-	)
-	+feedback('Отличные надёжные ребята! Всегда выручат в беде. Рекомендую и до следующего похода:)', 'img/feedback2.jpg', 'Дмитро Яструб', 'PR-manager'
-	)
-
-	+feedback('I had a wonderful time with these guys! I highly recommend', 'img/feedback3.jpg', 'David Brian Esch', 'Fitness-couch'
+	.feedback__wrap
+		+feedback('It was a great 3 day hike through the more unknown parts in the mountains close to Hoverla so we encounterd only a few other people.', 'img/feedback1.jpg', 'Tim de Bie', 'Вчитель історії'
 		)
+		+feedback('Отличные надёжные ребята! Всегда выручат в беде. Рекомендую и до следующего похода:)', 'img/feedback2.jpg', 'Дмитро Яструб', 'PR-manager'
+		)
+
+		+feedback('I had a wonderful time with these guys! I highly recommend', 'img/feedback3.jpg', 'David Brian Esch', 'Fitness-couch'
+			)
 

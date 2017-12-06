@@ -1,0 +1,23 @@
+.footer-form{
+	background: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	padding: 45px 20px;
+	margin: 0 auto;
+	border-radius: 5px;
+	&__title{
+		@include block__title($font-size__title, center, 
+			$primary-color, $text-upper);
+			letter-spacing: 2px;
+			margin: 0;
+	}
+	&__text{
+		color: #383e4a;
+		font-size: $font-size__middle;
+		margin: 5px 0 25px;
+
+
+	}
+	@media (min-width: 740px){
+		width: 44%;
+	}
+}

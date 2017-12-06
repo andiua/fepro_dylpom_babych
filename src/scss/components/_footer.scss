@@ -1,21 +1,49 @@
-.footer__links{
+.page-footer{
+	background: $background-footer center no-repeat;
+	background-size: cover;
+	paddin-top: 100px;
+	margin-top: -50px;
+	@media (min-width: 1300px){
+		padding-top: 260px;
+		margin-top: -130px;
+	}
+}
+.footer-bottom--wrap{
+	margin-top: 150px;
 	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	margin-bottom: 12px;
+	justify-content: space-between;
 }
-.sight-footer{
-	background-color: #000000;
-	padding-top: 12px;
-	padding-bottom: 12px
+.footer-text{
+	@extend .page-header__main-text;
 }
-.footer__links a{
-	margin-left: 6px;
-	margin-right: 6px;
+.footer--icon-soc_vk:before {
+	display: block;	
+	content: '';
+	@include sprite($vk);
+	&:hover{
+		@include sprite($vk-hover);
+	}
 }
-.footer--text{
-	color: $primary-color-light;
-	font-family: $primary-font-family;
-	font-size: $font-size-text;
-	text-align: center;
+.footer--icon-soc_tw:before {
+	padding: 10px 10px;
+	display: inline-block;	
+	content: '';
+	@include sprite($twitter);
+	&:hover{
+		@include sprite($twitter-hover);
+	}
+}
+.footer--icon-soc_fb:before {
+	display: inline-block;	
+	content: '';
+	@include sprite($fb);
+	&:hover{
+		@include sprite($fb-hover);
+	}
+}
+.footer-tel{
+	@extend .page-header__main-text;
+	font-size: $font-size__toure--title;
+	font-weight: $font-weight-bold;
+	line-height: 2;
 }

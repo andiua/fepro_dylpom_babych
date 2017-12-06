@@ -10,21 +10,27 @@ $name-backgr:(
 .tour{
 	background: #fff $background-tours center no-repeat;
 	background-size: cover;
+	padding-bottom: 150px;
 	&-item{
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		margin: 0 8px;
 		color: $primary-color__white;
 		@each $name, $backgr in $name-backgr{
 			&--#{$name} {
 				border-radius: 5px;
-				height: 355px;
+				height: 380px;
 				background: $backgr center no-repeat;
 			}
 		}
 		& > *{
-			margin: 15px;
+			margin: 0 15px;
 		}
+		& > *:first-child{
+			margin: 15px 15px 120px;
+		}
+
 		&__raiting-item{
 			display: inline-block;	
 			@include sprite($star);	
@@ -33,17 +39,23 @@ $name-backgr:(
 			font-size: $font-size__small-title;
 			text-transform: $text-upper;
 			word-wrap: break-word;
-		    height: 50px;
+		    max-height: 50px;
+		    margin-bottom: 10px;
     		overflow: hidden;
 			line-height: $primary-line-height;
+			font-weight: 400;
 		}
 		&__text{
 			word-wrap: break-word;
-			max-height: 140px;
+			max-height: 70px;
+			margin-bottom: 75px;
 			overflow: hidden;
 			line-height: $primary-line-height;
+			margin-bottom: 70px;
+			font-weight: $font-weight-light;
 		}
 		&__price{
+			height: 60px;
 			margin: 0;
 			display: flex;
 			justify-content: space-between;
@@ -55,14 +67,27 @@ $name-backgr:(
 				font-size: $font-size__bigger;
 			}
 			&--new{
-				font-size: $font-size__small-title;
+				font-size: $font-size__toure--price-new;
 				font-weight: $font-weight-bold;
 			}
 		}
 	}
 }
 .wrap-tour{
-	background: $background-header-planet--tr center no-repeat;
+	background: $background-header-planet--tr no-repeat;
 	background-size: cover;
 	padding: 30px 0;
+}
+@media (min-width: 740px){
+	.tour-item{
+		margin: 0 15px;
+	}	
+}
+@media (min-width: 1300px){
+	.tour{
+		padding-bottom: 310px;
+		&-item{
+		margin: 0 35px;
+		}	
+	}
 }

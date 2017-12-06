@@ -4,11 +4,11 @@ mixin head-meta(title, description, href)
 	link(rel="canonical" href= href)
 
 mixin feedback(text, image, name, profession)
-	.feedback__wrap
+	.feedback__post
 		p.feedback__text= text
 		p.feedback__img
 			img(src= image)
-		p.feedback__name= name
+		span.feedback__name= name
 		span.feedback__proffesion= profession
 
 mixin journal(image, icon, name, title, text)

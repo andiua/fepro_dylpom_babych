@@ -33,7 +33,7 @@
 			max-width: 260px;
 		}
 }
-.order__form input[type="text"], input[type='tel'] {
+input[type="text"], input[type="email"], input[type='tel'] {
 	width: 100%;
 	height: 50px;
 	border: 0;
@@ -44,6 +44,15 @@
 		box-shadow: 0 0 5px $primary-color__menu;
 	}
 }
-.contact-us form input[type="submit"] {
-
+.footer-form--wrap input{
+	margin-bottom: 20px;
+	height: 60px;
+}
+.btn-footer{
+	@extend.btn-link;
+	width: 100%;
+	height: 70px;
+	font-size: $font-size__middle;
+	font-weight: $font-weight-bold;
+	margin-bottom: 0 !important;
 }

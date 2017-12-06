@@ -102,6 +102,10 @@
 {
     display: flex;
 }
+.feedback__post
+{
+    display: block !important;
+}
 .slick-loading .slick-slide
 {
     visibility: hidden;
