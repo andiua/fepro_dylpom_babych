@@ -1,0 +1,14 @@
+@media (min-width: 740px){
+	.block__content-wrap{
+		display: flex;
+	}
+	.block__text-wrap{
+		flex: 1 0 50%;
+		margin-right: 30px;
+	}
+	.block__img-wrap{
+	    max-height: 500px;
+	    overflow: hidden;
+	    display: flex;
+	}
+}

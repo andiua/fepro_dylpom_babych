@@ -1,72 +1,69 @@
-.body--error {
+.body-wrap {
 	background: $background-404 center fixed no-repeat;
 	background-size: cover;
 }
-.wrap--error {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 20% 20px 0 20px;
+.page-header--error{
+	background: none;
 }
-.error-page__name {
-	// color: $primary-color-turquoise;
+.wrap--error {
+	@include flex-parrent (column, center, center);
+	margin: 0 20px;
+	text-align: center;
+}
+.error-page__title {
+	color: $primary-color;
 	line-height: 1;
 	letter-spacing: 10px;
 	font-size: $font-size-404;
 }
 .error-page__info{
-	padding-left: 20px;
-	margin-left: 20px;
-	border-left: 1px solid $primary-color;
-	max-width: 440px;
+	&-title{
+		color: $primary-color__title;
+		font-size: $font-size-404 / 3;
+		margin: 20px 0;
+	}
+	&-text{
+		color: $primary-color__white;
+		font-size: $font-size__small-title;
+	}
+	&-link{
+		width: 100%;
+	    height: auto;
+	    padding: 15px;
+	    line-height: $primary-line-height;
+		}
 }
-.error-page__info-title{
-	// color: $primary-color-turquoise;
-	font-size: $font-size-404 / 3;
-}
-.error-page__info-text, .error-page__info-link{
-	color: $primary-color__text;
-	font-size: $font-size__small-title;
-}
-
-.error-page__info-link{
-	display: block;
-	margin-top: 20px;
-	text-decoration: none;
-}
-.error-page__info-link:hover{
-	text-decoration: underline;
-}
-.error-page__info-link:before{
-	content: "< ";
-}
-@media (min-width: 640px){
-	.error-page__name{
+@media (min-width: 740px){
+	.wrap--error{
+		flex-direction: row;
+	}
+	.error-page__title{
 		font-size: $font-size-404 * 2;
 	}
 	.error-page__info{		
 		padding-left: 40px;
 		margin-left: 40px;
-	}
-	.error-page__info-title {
-		font-size: $font-size-404 / 2;	
-	}
-	.error-page__info-text, .error-page__info-link{
+		border-left: 1px solid $primary-color;
+		&-title {
+			font-size: $font-size-404 / 2;	
+		}
+	    &-text, &-link{
 		font-size: $font-size__small-title;	
+		}
 	}
 }
-@media (min-width: 1200px){
-	.error-page__name{
+@media (min-width: 1300px){
+	.error-page__title{
 		font-size: $font-size-404 * 3;
 	}
 	.error-page__info{		
 		padding-left: 100px;
 		margin-left: 100px;
-	}
-	.error-page__info-title{
-		font-size: $font-size-404;
-	}
-	.error-page__info-text, .error-page__info-link{
-		font-size: $font-size__title;
+	    &-title{
+			font-size: $font-size-404;
+		}
+	    &-text, &-link{
+			font-size: $font-size__title;
+		}
 	}
 }

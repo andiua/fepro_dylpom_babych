@@ -1,5 +1,5 @@
 .page-footer{
-	background: $background-footer center no-repeat;
+	background: $background-footer-img center no-repeat;
 	background-size: cover;
 	paddin-top: 100px;
 	margin-top: -50px;
@@ -9,9 +9,17 @@
 	}
 }
 .footer-bottom--wrap{
+	background-color: $background-footer;
 	margin-top: 150px;
-	display: flex;
-	justify-content: space-between;
+	padding: 20px 15px;
+	@include flex-parrent (column-reverse, space-between, center);
+	@media (min-width: 740px){
+		flex-direction: row;
+		padding: 25px 30px;
+	}
+	@media (min-width: 1300px){
+		padding: 25px 100px;
+	}
 }
 .footer-text{
 	@extend .page-header__main-text;
@@ -46,4 +54,7 @@
 	font-size: $font-size__toure--title;
 	font-weight: $font-weight-bold;
 	line-height: 2;
+	&:hover{
+		border-bottom: $border-hover;	
+	}
 }

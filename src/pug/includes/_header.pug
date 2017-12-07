@@ -15,9 +15,4 @@ header.page-header
 								else
 									a.menu__link(href=item.href.toLowerCase().replace("\ ", "-")+".html")= item.title
 				a.page-header__top-call(href='tel:+38063111111') Набрати нас
-		.page-header__main-wrap
-			h2.page-header__main-title Мандруйте разом з
-			.page-header__main-logo
-			p.page-header__main-text Наші мандрівки дають свободу, вони відкривають внутрішній потенціал людини. Примушують її вийти за межі зони комфорту "стерти черевики" і відчути життя всіма барвами веселки! 
-			.link-wrap
-				a.btn-link.page-header__main-btn(href="error.html") Замовити
+		include _header-mainPart	
