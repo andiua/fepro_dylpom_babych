@@ -3,7 +3,7 @@ $name-backgr:(
 	first: url(../img/hovelra.JPG),
 	second: url(../img/svydovec.JPG),
 	third: url(../img/maramorosy.jpg),
-	fourth: url(../img/synevyr.JPG),
+	fourth: url(../img/synevyr.jpg),
 	fifth: url(../img/gorgany.jpg),
 	);
 
@@ -16,6 +16,7 @@ $name-backgr:(
 		flex-direction: column;
 		justify-content: space-between;
 		margin: 0 8px;
+		overflow: hidden;
 		color: $primary-color__white;
 		@each $name, $backgr in $name-backgr{
 			&--#{$name} {

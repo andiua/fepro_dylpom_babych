@@ -25,25 +25,25 @@
 	@extend .page-header__main-text;
 }
 .footer--icon-soc_vk:before {
-	display: block;	
 	content: '';
+	display: block;	
 	@include sprite($vk);
 	&:hover{
 		@include sprite($vk-hover);
 	}
 }
 .footer--icon-soc_tw:before {
+	content: '';
 	padding: 10px 10px;
 	display: inline-block;	
-	content: '';
 	@include sprite($twitter);
 	&:hover{
 		@include sprite($twitter-hover);
 	}
 }
 .footer--icon-soc_fb:before {
-	display: inline-block;	
 	content: '';
+	display: inline-block;	
 	@include sprite($fb);
 	&:hover{
 		@include sprite($fb-hover);
