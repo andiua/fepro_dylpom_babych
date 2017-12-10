@@ -1,18 +1,21 @@
 include ../mixins/_mixins
-header.page-header
-	.wrap.wrap--header
-		.page-header__top
-			.page-header__top-wrap
-				a.page-header__logo(href='index.html')
-				-var menu=[{href: 'Index', title: 'Головна'}, {href:'About us', title: 'Про нас'}, {href:'Toure', title: 'Тури'}, {href:'Error', title: 'Послуги'}, {href:'Error', title: 'Журнал'}]
-				.btn-menu Меню
-				nav.menu
-					ul
-						each item in menu
-							li.menu__item
-								if item.title.toLowerCase() === currentPage
-									span.current-page= item.title
-								else
-									a.menu__link(href=item.href.toLowerCase().replace("\ ", "-")+".html")= item.title
-				a.page-header__top-call(href='tel:+38063111111') Набрати нас
-		include _header-mainPart	
+-var header=[{class: 'Index', title: 'Головна'}, {class:'About-us', title: 'Про нас'}, {class:'Toure', title: 'Тури'}, {class:'Error', title: 'Послуги'}, {class:'Error', title: 'Журнал'}]
+each item in header
+	if item.title.toLowerCase() === currentPage
+		header(class= "page-header--" + item.class.toLowerCase())
+			.wrap.wrap--header
+				.page-header__top
+					.page-header__top-wrap
+						a.page-header__logo(href='index.html')
+						-var menu=[{href: 'Index', title: 'Головна'}, {href:'About us', title: 'Про нас'}, {href:'Toure', title: 'Тури'}, {href:'Error', title: 'Послуги'}, {href:'Error', title: 'Журнал'}]
+						.btn-menu Меню
+						nav.menu
+							ul
+								each item in menu
+									li.menu__item
+										if item.title.toLowerCase() === currentPage
+											span.current-page= item.title
+										else
+											a.menu__link(href=item.href.toLowerCase().replace("\ ", "-")+".html")= item.title
+						a.page-header__top-call(href='tel:+38063111111') Набрати нас
+				include _header-mainPart	

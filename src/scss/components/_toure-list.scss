@@ -25,17 +25,43 @@ $name-backgr:(
 				background: $backgr center no-repeat;
 			}
 		}
+		&:hover &__price{
+			height: auto;
+			transition: 0.2s ease;
+		}
+		&:hover &__price--link{
+			position: relative;
+			display: block;
+			margin: 10px 0 0;
+			width: 100%;
+			bottom: 0;
+			transition: 0.2s ease;
+			text-transform: $text-upper;
+			font-size: $font-size__small-title;
+			font-weight: $font-weight-medium;
+			border-top: 1px solid transparent;
+		}
+		&:hover &__price--link:hover{
+			color: $primary-color;
+			border-bottom:1px solid $primary-color; 
+			border-top: 0 solid transparent;
+		}
 		& > *{
 			margin: 0 15px;
 		}
 		& > *:first-child{
-			margin: 15px 15px 120px;
+			margin: 15px 15px 80px;
+		}
+		&__raiting{
+			display: flex;
+			&-item{
+				transition: 0.2s ease;
+				margin: 0 3px;
+				// content: '';
+				@include sprite($star_hover);	
+			}
 		}
 
-		&__raiting-item{
-			display: inline-block;	
-			@include sprite($star);	
-		}
 		&__title{
 			font-size: $font-size__small-title;
 			text-transform: $text-upper;
@@ -48,12 +74,13 @@ $name-backgr:(
 		}
 		&__text{
 			word-wrap: break-word;
-			max-height: 70px;
+			max-height: 670px;
 			margin-bottom: 75px;
 			overflow: hidden;
 			line-height: $primary-line-height;
 			margin-bottom: 70px;
 			font-weight: $font-weight-light;
+			transition: 0.2s ease;
 		}
 		&__price{
 			height: 60px;
@@ -61,7 +88,11 @@ $name-backgr:(
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			position: relative;
 			padding: 15px;
+			text-align: center;
+			transition: 0.2s ease;
+			flex-wrap: wrap;
 			background: rgba(44, 46, 55, 0.4);
 			&--old{
 				text-decoration: $text-line-through;
@@ -71,8 +102,29 @@ $name-backgr:(
 				font-size: $font-size__toure--price-new;
 				font-weight: $font-weight-bold;
 			}
+			&--link{
+				display: none;
+			}
+			&:hover{
+				
+				
+				
+			}
 		}
 	}
+}
+.tour-item__raiting-item.tour-item__raiting-item--active ~ 
+.tour-item__raiting-item{
+	// content: '';
+	@include sprite($star);	
+}
+.tour-item__raiting:hover .tour-item__raiting-item {
+  // content: '';
+	@include sprite($star_hover);
+}
+.tour-item__raiting-item:hover ~ .tour-item__raiting-item{
+	// content: '';
+	@include sprite($star);	
 }
 .wrap-tour{
 	background: $background-header-planet--tr no-repeat;
@@ -92,3 +144,4 @@ $name-backgr:(
 		}	
 	}
 }
+

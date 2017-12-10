@@ -1,5 +1,8 @@
 include ../mixins/_mixins
-header.page-header
+	-var menu=[{class: 'Index', title: 'Головна'}, {class:'About us', title: 'Про нас'}, {class:'Toure', title: 'Тури'}, {class:'Error', title: 'Послуги'}, {class:'Error', title: 'Журнал'}]
+	each item in menu
+
+header(class= item.class.toLowerCase())
 	.wrap.wrap--header
 		.page-header__top
 			.page-header__top-wrap

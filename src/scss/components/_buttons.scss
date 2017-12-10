@@ -4,8 +4,10 @@
 		$primary-color__white, $border-box-blue, 
 		$font-weight-bold, 5px);
 	overflow: hidden;
+	transition: 0.2s ease;
 	&:hover{
 		background: $primary-color__hover;
+		transition: 0.2s ease;
 	}
 }
 .page-header__top-call{
@@ -30,6 +32,7 @@
 .order-btn{
 	width:100%;
 	margin-right: 2px;
+	transition: 0.2s ease;
 		@media (min-width: 740px){
 			max-width: 260px;
 		}
@@ -41,13 +44,16 @@ input[type="text"], input[type="email"], input[type='tel'] {
 	padding-left: 20px;
 	color: $primary-color__text;
 	background: $primary-color__white;
+	transition: 0.2s ease;
 	&:focus{
 		box-shadow: 0 0 5px $primary-color__menu;
+		transition: 0.2s ease;
 	}
 }
 .footer-form--wrap input{
 	margin-bottom: 20px;
 	height: 60px;
+	transition: 0.2s ease;
 }
 .btn-footer{
 	@extend.btn-link;

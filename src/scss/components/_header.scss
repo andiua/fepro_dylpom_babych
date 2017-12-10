@@ -1,9 +1,19 @@
-.page-header, .page-header__top{
+.page-header--index, .page-header__top{
 	background: $primary-color $background-header 5% 20% no-repeat;
 		@media (min-width: 1300px){
 			background-position: center;	
 			background-size: cover;	
 		}
+}
+.page-header--about-us{
+	@extend .page-header--index;
+	background: $primary-color $background-header_about-us 50% 15% no-repeat;
+}
+.page-header--toure{
+	@extend .page-header--index;
+	background: $primary-color $background-header_toure 25% 15% no-repeat;
+}
+.page-header, .page-header__top{
 	&__top{
 		background: rgba(255, 255, 255, 0.2);
 		padding: 20px 0;
