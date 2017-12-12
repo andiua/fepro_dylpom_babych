@@ -13,7 +13,9 @@ var bourbon = require('node-bourbon');
 var csso = require('gulp-csso');
 var htmlhint = require("gulp-htmlhint");
 var sassGlob = require('gulp-sass-glob');
-// var bulkSass = require('gulp-sass-bulk-import');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 gulp.task('sprite', function() {
     var spriteData =
@@ -71,6 +73,18 @@ gulp.task('css', function() {
             .pipe( gulp.dest('./app/css/') );
 });
 
+gulp.task('scripts', function() {
+    return gulp.src([
+         
+         'src/js/*.js',
+
+         'src/js/common.js', // Always at the end
+        ])
+    .pipe(concat('scripts.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/js'));
+});
+
 gulp.task('browserSync', ['sass', 'pug'], function() {
     browserSync.init({
         server: {
@@ -96,5 +110,7 @@ gulp.task('watch', ['pug', 'sass', 'browserSync'], function() {
     gulp.watch('src/pug/**/*.pug', ['pug']);
     // gulp.watch('src/scss/**/*.scss', ['styles']);
     gulp.watch('src/scss/**/*.scss', ['sass']);
+    gulp.watch('src/js/**/*.js', ['scripts']);
     gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', browserSync.reload);
 });

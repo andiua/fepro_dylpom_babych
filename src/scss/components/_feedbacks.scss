@@ -1,11 +1,14 @@
 .feedback__post{
     display: block !important;
+    margin: 0 30px;
 }
 .feedback__text{
-	@extend .page-header__main-text;
-	height: 110px;
+	font-size: $font-size__bigger;
+	line-height: $text-line-height;
+	height: 150px;
 	overflow: hidden;
-	margin: 0 10px;
+	// margin: 0 10px;
+	color: $primary-color__menu;
 	&:before{
 		display: block;	
 		content: '';

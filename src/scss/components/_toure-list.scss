@@ -53,11 +53,12 @@ $name-backgr:(
 			margin: 15px 15px 80px;
 		}
 		&__raiting{
-			display: flex;
+			display: block;
 			&-item{
+				display: inline-block;
 				transition: 0.2s ease;
 				cursor: pointer;
-				margin: 0 3px;
+				padding: 0 3px;
 				// content: '';
 				@include sprite($star_hover);	
 			}
@@ -75,10 +76,9 @@ $name-backgr:(
 		&__text{
 			word-wrap: break-word;
 			max-height: 670px;
-			margin-bottom: 75px;
 			overflow: hidden;
 			line-height: $primary-line-height;
-			margin-bottom: 70px;
+			margin-bottom: 40px;
 			font-weight: $font-weight-light;
 			transition: 0.2s ease;
 		}

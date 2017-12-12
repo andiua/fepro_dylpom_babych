@@ -1,6 +1,8 @@
 .page-header--index, .page-header__top{
 	background: $primary-color $background-header 5% 20% no-repeat;
-	background-size: 250%;	
+		@media (min-width: 740px){
+			background-size: 250%;	
+		}
 		@media (min-width: 1300px){
 			background-position: center;	
 			background-size: cover;	
@@ -16,7 +18,7 @@
 }
 .page-header, .page-header__top{
 	&__top{
-		background: rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.6);
 		padding: 20px 0;
 		&-wrap{
 			display: flex;
@@ -40,7 +42,6 @@
 		text-align: center;
 		@media (min-width: 1300px){
 			align-items: stretch;
-			background: $background-header-border 0 50% no-repeat;
 			background-size: 100%;	
 			padding: 20px;
 			text-align: left;
@@ -57,13 +58,13 @@
 	}
 	&__main-text{
 		font-size: $font-size__bigger;
-		color: $primary-color__menu;
+		color: $primary-color__white;
 		line-height: $line-height--middle;
 		@media (min-width: 740px){
 			max-width: 715px;
 		}
 		@media (min-width: 1300px){
-			max-width: 600px;
+			max-width: 50%;
 		}
 	}
 	&__main-logo:before{
@@ -115,24 +116,18 @@
 	&:hover{
     	border-bottom: $border-hover;
     }
-	// &:hover ~ .menu, .menu:hover {
-	// 	display:inline-block;
-	// 	background: rgba(255, 255, 255, .4 );
-	// 	text-align: center;
-	// 	text-transform: $text-upper;
-	// 	position: absolute;
-	// 	left: 33%;
-	// 	top: 57px;
-	// }
 }
 .btn-menu:hover ~ .menu, .menu:hover {
 	display:inline-block;
-	background: rgba(255, 255, 255, .4 );
+	background: rgba(255, 255, 255, .8 );
 	text-align: center;
 	text-transform: $text-upper;
 	position: absolute;
 	left: 33%;
 	top: 57px;
+	@media (min-width: 740px){
+		background: none;
+	}
 }
 @media (min-width: 1300px){
 	.menu{

@@ -15,10 +15,10 @@
 	@include flex-parrent (column-reverse, space-between, center);
 	@media (min-width: 740px){
 		flex-direction: row;
-		padding: 10px 30px;
+		padding: 0 30px;
 	}
 	@media (min-width: 1300px){
-		padding: 15px 100px;
+		padding: 0 100px;
 	}
 }
 .footer-text{
@@ -40,10 +40,10 @@
 	&:before{
 		@extend .footer--icon-soc_vk:before;
 		@include sprite($twitter);
+		background-position: -570px -300px;
 	}
 	&:hover::before{
 		@include sprite($twitter-hover);
-		background-position: -795px -97px;
 	}
 }
 .footer--icon-soc_fb{
