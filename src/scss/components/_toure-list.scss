@@ -26,20 +26,20 @@ $name-backgr:(
 			}
 		}
 		&:hover &__price{
-			height: auto;
+			height: 90px;
 			transition: 0.2s ease;
 		}
 		&:hover &__price--link{
 			position: relative;
 			display: block;
-			margin: 10px 0 0;
+			margin: 0;
 			width: 100%;
 			bottom: 0;
 			transition: 0.2s ease;
 			text-transform: $text-upper;
 			font-size: $font-size__small-title;
 			font-weight: $font-weight-medium;
-			border-top: 1px solid transparent;
+			border-bottom: 1px solid transparent;
 		}
 		&:hover &__price--link:hover{
 			color: $primary-color;
@@ -56,6 +56,7 @@ $name-backgr:(
 			display: flex;
 			&-item{
 				transition: 0.2s ease;
+				cursor: pointer;
 				margin: 0 3px;
 				// content: '';
 				@include sprite($star_hover);	

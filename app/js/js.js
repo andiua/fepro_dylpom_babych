@@ -67,9 +67,13 @@
 		})
 	});
 
+	
 
 
 });
+
+var gallery = $('.gallery a').simpleLightbox();
+
 
 //Raiting
 var rating = document.querySelector('.tour-item__raiting'),

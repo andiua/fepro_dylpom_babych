@@ -15,37 +15,43 @@
 	@include flex-parrent (column-reverse, space-between, center);
 	@media (min-width: 740px){
 		flex-direction: row;
-		padding: 25px 30px;
+		padding: 10px 30px;
 	}
 	@media (min-width: 1300px){
-		padding: 25px 100px;
+		padding: 15px 100px;
 	}
 }
 .footer-text{
 	@extend .page-header__main-text;
 }
-.footer--icon-soc_vk:before {
-	content: '';
-	display: block;	
-	@include sprite($vk);
-	&:hover{
+.footer--icon-soc_vk{
+	padding: 10px 10px;
+	&:before {
+		content: '';
+		display: inline-block;	
+		@include sprite($vk);
+	}
+	&:hover::before{
 		@include sprite($vk-hover);
 	}
 }
-.footer--icon-soc_tw:before {
-	content: '';
-	padding: 10px 10px;
-	display: inline-block;	
-	@include sprite($twitter);
-	&:hover{
+.footer--icon-soc_tw{
+	@extend .footer--icon-soc_vk;
+	&:before{
+		@extend .footer--icon-soc_vk:before;
+		@include sprite($twitter);
+	}
+	&:hover::before{
 		@include sprite($twitter-hover);
 	}
 }
-.footer--icon-soc_fb:before {
-	content: '';
-	display: inline-block;	
-	@include sprite($fb);
-	&:hover{
+.footer--icon-soc_fb{
+	@extend .footer--icon-soc_vk;
+	&:before{
+		@extend .footer--icon-soc_vk:before;
+		@include sprite($fb);
+	}
+	&:hover::before{
 		@include sprite($fb-hover);
 	}
 }
@@ -54,6 +60,8 @@
 	font-size: $font-size__toure--title;
 	font-weight: $font-weight-bold;
 	line-height: 2;
+	margin: 10px 0; 
+	border-bottom: 2px solid transparent;
 	&:hover{
 		border-bottom: $border-hover;	
 	}

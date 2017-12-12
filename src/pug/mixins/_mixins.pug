@@ -24,10 +24,11 @@ mixin contact-form(type, placeholder, name)
 	input(type=type, placeholder=placeholder, name= name,required)
 
 mixin how-work(number, title, text)
-	span.how-work__content-number= number
-	.how-work__content-icon
-	.content-subtitle.how-work__content-title= title
-	.small-text= text
+	.block__content
+		span.how-work__content-number= number
+		div(class='how-work__content-icon how-work__content-icon--' + number)
+		.how-work__content-title= title
+		.small-text= text
 
 mixin tour-list(nameClass, title, text, oldPrice, newPrice)
 	a(class='tour-item tour-item--' + nameClass)

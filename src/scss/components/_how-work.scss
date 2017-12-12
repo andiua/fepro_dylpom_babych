@@ -1,0 +1,66 @@
+.block__content--flex{
+	text-align: center;
+	margin-top: 50px;
+}
+.how-work__content-number{
+	display: inline-block;
+	border: $border-hover;
+	width: 50px;
+	height: 50px;
+	padding: 12px;
+	border-radius: 50%;
+	overflow: hidden;
+	font-size: $font-size__small;
+	color: $primary-color;
+	position: relative;
+}
+.how-work__content-icon{
+	margin: 50px 0 25px;
+	&--1:before{
+		display: inline-block;
+		content: '';
+		@include sprite ($guide);
+	}
+	&--2:before{
+		display: inline-block;
+		content: '';
+		@include sprite ($routs);
+	}
+	&--3:before{
+		display: inline-block;
+		content: '';
+		@include sprite ($cheap);
+	}
+	&--4:before{
+		display: inline-block;
+		content: '';
+		@include sprite ($client);
+	}
+}
+.how-work__content-title{
+	margin: 0 0 5px;
+	text-transform: none;
+	color: $primary-color__title;
+	font-size: $font-size__bigger;
+	font-weight: $font-weight-bold;
+}
+@media (min-width: 740px){
+	.block__content{
+		height: 500px;
+		flex-basis: 50%;	
+		&--flex{
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}
+@media (min-width: 1300px){
+	.block__content{
+		height: 500px;
+		flex-basis: 25%;	
+		&--flex{
+			display: flex;
+		}
+	}
+}
+

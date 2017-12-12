@@ -1,0 +1,17 @@
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+    justify-content: center;
+	& a:first-child, & a:nth-child(2){
+		align-self: flex-end;
+	}
+}
+.big{
+	flex-basis: 300px;
+}
+.container .gallery a.big img{
+	width: 100%;
+	min-width: auto;
+	min-height: auto;
+}

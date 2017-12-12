@@ -3,7 +3,9 @@
 }
 .feedback__text{
 	@extend .page-header__main-text;
-	max-width: 100%;
+	height: 110px;
+	overflow: hidden;
+	margin: 0 10px;
 	&:before{
 		display: block;	
 		content: '';

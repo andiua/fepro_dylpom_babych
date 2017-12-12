@@ -21,6 +21,7 @@ gulp.task('sprite', function() {
             .pipe(spritesmith({
                 imgName: 'sprite.png',
                 cssName: '_sprite.scss',
+                padding: 15
             }));
 
     spriteData.img.pipe(gulp.dest('./app/img/')); // путь, куда сохраняем картинку
