@@ -62,7 +62,6 @@ $name-backgr:(
 				@include sprite($star_hover);	
 			}
 		}
-
 		&__title{
 			font-size: $font-size__small-title;
 			text-transform: $text-upper;
@@ -106,18 +105,14 @@ $name-backgr:(
 			&--link{
 				display: none;
 			}
-			&:hover{
-				
-				
-				
-			}
 		}
 	}
 }
-.tour-item__raiting-item.tour-item__raiting-item--active ~ 
 .tour-item__raiting-item{
-	// content: '';
 	@include sprite($star);	
+	&--active{
+		@include sprite($star_hover);
+	}
 }
 .tour-item__raiting:hover .tour-item__raiting-item {
   // content: '';

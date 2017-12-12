@@ -3,6 +3,7 @@
 		$primary-color, 
 		$primary-color__white, $border-box-blue, 
 		$font-weight-bold, 5px);
+	cursor: pointer;
 	overflow: hidden;
 	transition: 0.2s ease;
 	&:hover{

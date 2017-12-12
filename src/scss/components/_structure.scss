@@ -46,7 +46,7 @@ a {
 	@include block__title($font-size__title, center, 
 		$primary-color__title, 
 		$text-upper);
-	margin-bottom: 50px;
+	margin: 50px 0;
 	text-align: center;	
 	position: relative;
 	&:before{

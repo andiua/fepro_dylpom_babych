@@ -27,8 +27,8 @@ mixin how-work(number, title, text)
 	.block__content
 		span.how-work__content-number= number
 		div(class='how-work__content-icon how-work__content-icon--' + number)
-		.how-work__content-title= title
-		.small-text= text
+		h5.how-work__content-title= title
+		p.small-text= text
 
 mixin tour-list(nameClass, title, text, oldPrice, newPrice)
 	a(class='tour-item tour-item--' + nameClass)

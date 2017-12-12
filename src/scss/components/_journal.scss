@@ -1,8 +1,8 @@
 .journal-post{
-	box-shadow: 0 0 10px $primary-color__menu;
+	box-shadow: none;
 	text-align: center;
 	position: relative;
-	&:hover{box-shadow: 0 0 20px 5px $primary-color__menu;}
+	&:hover{box-shadow: $box-shadow; transition: 0.5s ease;}
 	&:hover &__img-wrap--heart:before{
 		@include sprite($heart-hover);
 	}

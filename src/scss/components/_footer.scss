@@ -43,6 +43,7 @@
 	}
 	&:hover::before{
 		@include sprite($twitter-hover);
+		background-position: -795px -97px;
 	}
 }
 .footer--icon-soc_fb{

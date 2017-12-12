@@ -1,5 +1,6 @@
 .page-header--index, .page-header__top{
 	background: $primary-color $background-header 5% 20% no-repeat;
+	background-size: 250%;	
 		@media (min-width: 1300px){
 			background-position: center;	
 			background-size: cover;	

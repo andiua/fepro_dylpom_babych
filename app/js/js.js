@@ -75,17 +75,11 @@
 var gallery = $('.gallery a').simpleLightbox();
 
 
-//Raiting
-var rating = document.querySelector('.tour-item__raiting'),
-    ratingItem = document.querySelectorAll('.tour-item__raiting-item');
-
-rating.onclick = function(e){
-  var target = e.target;
-  if(target.classList.contains('tour-item__raiting-item')){
-    removeClass(ratingItem,'tour-item__raiting-item--active')
-    target.classList.add('tour-item__raiting-item--active');
-  }
-}
+$('.tour').on('click', '.tour-item__raiting-item', function(e){
+    $(this).prevAll(".tour-item__raiting-item").addClass('tour-item__raiting-item--active');
+    $(this).nextAll(".tour-item__raiting-item--active").removeClass('tour-item__raiting-item--active'); 
+    $(this).addClass('tour-item__raiting-item--active');
+})
 
 function removeClass(elements, className) {
   for (var i = 0; i < elements.length; i++) {
