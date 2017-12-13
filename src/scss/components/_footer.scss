@@ -11,7 +11,7 @@
 .footer-bottom--wrap{
 	background-color: $background-footer;
 	margin-top: 150px;
-	padding: 20px 15px;
+	padding: 0 15px;
 	@include flex-parrent (column-reverse, space-between, center);
 	@media (min-width: 740px){
 		flex-direction: row;

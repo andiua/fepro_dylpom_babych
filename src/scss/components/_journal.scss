@@ -1,7 +1,7 @@
 .journal-post{
 	box-shadow: none;
 	text-align: center;
-	position: relative;
+	// position: relative;
 	&:hover{box-shadow: $box-shadow; transition: 0.5s ease;}
 	&:hover &__img-wrap--heart:before{
 		@include sprite($heart-hover);
@@ -16,19 +16,26 @@
 		@include flex-parrent(row, center, center);
 		overflow: hidden;
 		max-height: 370px;
+		position: relative;
 		&--heart{
 			&:before{
 				@include journal-icon($heart);
+				top: calc(50% - 40px);
+				left: calc(50% - 40px);
 			}
 		}
 		&--leaf{
 			&:before{
 				@include journal-icon($leaf);
+				top: calc(50% - 32px);
+				left: calc(50% - 32px);
 			}
 		}
 		&--drop{
 			&:before{
 				@include journal-icon($drop);
+				top: calc(50% - 37px);
+				left: calc(50% - 30px);
 			}
 		}
 	}

@@ -31,7 +31,7 @@ mixin how-work(number, title, text)
 		p.small-text= text
 
 mixin tour-list(nameClass, title, text, oldPrice, newPrice)
-	a(class='tour-item tour-item--' + nameClass)
+	div(class='tour-item tour-item--' + nameClass)
 		.tour-item__raiting
 			.tour-item__raiting-item.tour-item__raiting-item--active
 			.tour-item__raiting-item
@@ -43,4 +43,4 @@ mixin tour-list(nameClass, title, text, oldPrice, newPrice)
 		.tour-item__price
 			span.tour-item__price--old= oldPrice
 			span.tour-item__price--new= newPrice
-			p.tour-item__price--link Перейти
+			a.tour-item__price--link(href="error.html") Перейти

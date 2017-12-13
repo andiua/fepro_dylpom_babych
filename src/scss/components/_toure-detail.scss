@@ -4,6 +4,7 @@
 @media (min-width: 740px){
 	.block__content-wrap{
 		display: flex;
+		overflow: hidden;
 	}
 	.block__text-wrap{
 		flex: 1 0 50%;
@@ -19,6 +20,9 @@
 }
 
 @media (min-width: 1300px){
+	.block__content-wrap{
+		overflow: visible;
+	}
 	.block__img-wrap{
 		overflow: visible;
    		max-width: 500px;
@@ -39,6 +43,8 @@
 	   	 &:after{
 			content: '';
 			position: absolute;
+			top: 0;
+			right: -10px;
 			width: 100%;
 			height:100%;
 			display: inline-block;	

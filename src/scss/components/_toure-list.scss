@@ -34,6 +34,7 @@ $name-backgr:(
 			display: block;
 			margin: 0;
 			width: 100%;
+			color: $primary-color;
 			bottom: 0;
 			transition: 0.2s ease;
 			text-transform: $text-upper;
@@ -42,9 +43,9 @@ $name-backgr:(
 			border-bottom: 1px solid transparent;
 		}
 		&:hover &__price--link:hover{
-			color: $primary-color;
 			border-bottom:1px solid $primary-color; 
 			border-top: 0 solid transparent;
+			cursor: pointer;
 		}
 		& > *{
 			margin: 0 15px;
