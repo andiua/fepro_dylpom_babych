@@ -17,6 +17,8 @@
 		overflow: hidden;
 		max-height: 370px;
 		position: relative;
+		flex-basis: 50%;
+		height: 50%;
 		&--heart{
 			&:before{
 				@include journal-icon($heart);
@@ -87,7 +89,6 @@
 }
 @media (min-width: 1300px){
 	.journal-post{
-
 		flex-basis: 33.3%;
 		&__drop{
 			flex-direction: column;
