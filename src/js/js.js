@@ -50,18 +50,19 @@
 	});
 	$(function(){
 		$("input[name='name']").attr("pattern", ".{4,60}");
+		$("input[name='name']").attr("oninput","this.setCustomValidity('')");
 		$("input[name='name']").attr("oninvalid", "this.setCustomValidity('Мінімум 4 символи')");
 	});
 	$(function(){
 		$("form").on("submit", function(e){
 		  e.preventDefault();
-		  var userName =$(this).find('input[name=name]').val();
-		function toTitleCase(str)
-		{
-		    return str.replace(/\w\S*/g, function(txt){
+		  var userName = $(this).find('input[name=name]').val();
+		  function toTitleCase(str)	{
+		   	 return str.replace(/\w\S*/g, function(txt){
 		    	return txt.charAt(0).toUpperCase() + 
-		    	txt.substr(1).toLowerCase();});
-		}
+		    	txt.substr(1).toLowerCase();
+		     });
+		  };
 		  var succsessMassege = toTitleCase(userName) + ', ви успішно підписались! ';
 		alert(succsessMassege);
 		})
